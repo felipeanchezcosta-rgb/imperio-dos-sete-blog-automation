@@ -1,0 +1,45 @@
+# Copie este arquivo para config/blog.yaml e edite com a identidade do seu
+# blog. É esse arquivo que torna o projeto reaproveitável pra qualquer
+# nicho sem tocar em código — veja a seção "Adaptando pro seu blog" do
+# README para o passo a passo completo.
+
+blog:
+  # --- Campos obrigatórios ------------------------------------------------
+  nome: "Império dos Sete"
+  dominio: "espiritualidade afro-brasileira"
+  dominio_extendido: "Umbanda, Candomblé e Quimbanda"
+  descricao_curta: "espiritualidade afro-brasileira"
+
+  # --- Opcional (padrão: português do Brasil) -----------------------------
+  idioma: "português do Brasil"
+
+editorial:
+  # Vocabulário/jargão específico do nicho, usado no prompt de geração de
+  # pautas pra deixar as ideias mais precisas.
+  termos_especificos: "orixás, guias, giras, firmezas, banhos espirituais"
+
+  # Tamanho mínimo do corpo de cada artigo gerado.
+  min_palavras: 2000
+
+  # Como o texto deve soar.
+  tom: "Acolhedor, direto e respeitoso, sem soar didático demais nem \
+    academicista. Fale como quem já viveu aquilo, não como quem só leu a respeito."
+  voz: "um praticante experiente que também já passou pelas mesmas dúvidas"
+
+# Autores/fontes de referência que o modelo pode citar quando fizer sentido
+# (deixe a lista vazia — [] — se não tiver nenhum específico pro seu nicho).
+autores_referencia:
+  - "Reginaldo Prandi"
+  - "Pierre Verger"
+
+cta:
+  texto: "convidando o leitor a agendar uma consulta ou jogo de búzios"
+  link_markdown: "[Agende sua consulta](https://seublog.com.br/contato)"
+
+imagem:
+  paleta_cores: "amarelo/dourado, preto e branco/creme"
+  atmosfera_extra: "fumaça de defumador, luz de vela quente"
+  elementos_permitidos: "velas, búzios, folhas, panos, ferramentas rituais simbólicas"
+  elementos_proibidos: "human figures, faces, body parts, orixás ou entidades representadas"
+  descricao_marca: "emblema discreto da marca do blog, dourado sobre fundo escuro"
+  incluir_marca_padrao: true

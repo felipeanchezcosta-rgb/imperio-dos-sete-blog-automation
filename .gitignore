@@ -1,0 +1,34 @@
+# Segredos — NUNCA versionar
+.env
+*.env
+!.env.example
+
+# Identidade real do blog — versione só o .example, não o arquivo de verdade
+config/blog.yaml
+!config/blog.yaml.example
+
+# Saídas geradas pela automação (conteúdo, não código)
+saidas/
+materias/
+imagens/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Testes / cobertura / ferramentas
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editores / sistema
+.vscode/
+.idea/
+.DS_Store

@@ -1,0 +1,33 @@
+name: Testes
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  testes:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Instalar o projeto e as dependências de desenvolvimento
+        run: pip install -e ".[dev]"
+
+      - name: Checar formatação/lint (ruff)
+        run: ruff check src tests
+
+      - name: Rodar os testes com cobertura
+        run: pytest --cov --cov-report=term-missing
